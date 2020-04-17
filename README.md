@@ -1,2 +1,2 @@
 # petshop
-Sistema para agendamento de Petshop
+Sistema para agendamento de serviços de um Petshop
