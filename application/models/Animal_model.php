@@ -1,8 +1,8 @@
 <?php
-  class Pessoa_model extends CI_Model{
+  class Animal_model extends CI_Model{
       private $tabelaNome;
       public function __construct(){
-          $this->tabelaNome = 'pessoa';
+          $this->tabelaNome = 'animal';
           // $this->load->database();
       }
 
