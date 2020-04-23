@@ -23,7 +23,7 @@
           if($query->num_rows()==1){
               $registro = $query->row_array();
               $this->session->set_userdata('logado', $registro);
-              redirect('agendamento');
+              redirect('pessoa');
           }else{
               $dados['msg'] = "Usuário ou senha Incorretos";
               $this->load->view("login", $dados);
