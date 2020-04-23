@@ -35,7 +35,8 @@
               </select>
             </div>
 
-            <button class="btn btn-success" type="submit">Enviar</button>
+            <button class="btn btn-success" type="submit">Cadastrar</button>
+            <a href="<?= site_url('usuario'); ?>" class="btn btn-info">Cancelar</a>
           </form>
         </div>
     </div>

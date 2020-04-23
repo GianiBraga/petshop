@@ -9,7 +9,7 @@
           // if(empty($this->session->userdata['logado'])){
           //     redirect('login');
           // }
-          if($this->session->userdata['logado']['permissao']==USUARIO_PADRAO){
+         if($this->session->userdata['logado']['permissao']==USUARIO_PADRAO){
               redirect('login');
           }
           $this->load->model('usuario_model');
