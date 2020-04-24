@@ -37,7 +37,6 @@
           $rule_nome = 'required' . (($id==null)? '|is_unique[animal.nome]' : '');
           // echo $rule_nome;
           $this->form_validation->set_rules('nome', 'Nome', $rule_nome);
-          $this->form_validation->set_rules('raca', 'Raca', 'required');
           $this->form_validation->set_rules('sexo', 'Sexo', 'required');
           $this->form_validation->set_rules('dataNascimento', 'DataNascimento', 'required');
           $this->form_validation->set_rules('tamanho', 'Tamanho', 'required');

@@ -268,7 +268,7 @@ desired effect
             <li> <a href="<?= site_url('servico'); ?>">Serviço</a></li>
             <li><a href="<?= site_url('animal'); ?>">Pet</a></li>
             <li><a href="<?= site_url('pessoa'); ?>">Pessoa Responsavel</a></li>
-            <li><a href="<?= site_url('tiposervico'); ?>">Tipo Servico</a></li>
+            <li><a href="<?= site_url('servico'); ?>">Serviço</a></li>
             <li><a href="<?= site_url('raca'); ?>">Raça</a></li>
           </ul>
         </li>
