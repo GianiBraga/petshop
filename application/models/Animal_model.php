@@ -8,11 +8,14 @@
 
       public function get($id=null){
           if($id==null){
+                $this->db->select('a.id,a.sexo,a.dataNascimento,a.tamanho, a.peso, a.nome as animal, a.idraca,r.nome as raca,r.descricao');
+                $this->db->from('animal a');
+                $this->db->join('raca r','r.id=a.idraca');
               $query = $this->db->get($this->tabelaNome);
-              return $query->result_array(); //todos os registros
+               return $query->result_array(); //todos os registros
           }
           $query = $this->db->get_where($this->tabelaNome, array('id'=>$id));
-          return $query->row_array(); //uma unica linha MATCH
+             return $query->row_array(); //uma unica linha MATCH
       }
 
       public function remover($id){

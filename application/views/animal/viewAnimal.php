@@ -23,7 +23,7 @@
                 <?php foreach($lista as $item):?>
                   <tr>
                     <td><?= $item['id'];?></td>
-                    <td><?= $item['nome'];?></td>
+                    <td><?= $item['animal'];?></td>
                     <td><?= $item['raca'];?></td>
                     <td><?= $item['sexo'];?></td>
                     <td><?= $item['dataNascimento'];?></td>

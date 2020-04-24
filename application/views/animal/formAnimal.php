@@ -17,20 +17,28 @@
                 <label for="nome">Nome</label>
                 <input id="nome" class="form-control" type="text" name="nome"
                 value="<?= set_value('nome', $registro['nome']); ?>"
-                placeholder="Digite seu nome" required>
+                placeholder="Digite o nome" required>
             </div>
 
             <div class="form-group">
-              <label for="raca">Raça</label>
-              <input class="form-control" id="raca" type="text" name="raca" value="<?= set_value('raca', $registro['raca']); ?>"
-                 min="0" max="150" placeholder="Informe a Raça: ">
+            <label for="idraca">Raça</label>
+            <select class="form-control" name="idraca" required>
+            <option value="">Selecione uma raça da lista</option>
+            <?php foreach ($listaRaca as $item): ?>
+            <option value="<?= $item['id']; ?>" <?php if(isset($registro) && $item['id']==$registro['idraca']) echo "selected";?>>
+            <?= $item['nome']; ?>
+            </option>
+            <?php endforeach; ?>
+            </div>
+           </select>
             </div>
 
             <div class="form-group">
               <label for="sexo">Sexo</label>
-              <input class="form-control" id="sexo" type="text" name="sexo"
-                value="<?= set_value('sexo', $registro['sexo']); ?>"
-               min="0" max="1" placeholder="Informe o Sexo: ">
+              <select class="form-control" name="sexo">
+                <option value="M" <?php if(isset($registro) && $registro['sexo']=='M') echo "selected"; ?> >Macho</option>
+                <option value="F" <?php if(isset($registro) && $registro['sexo']=='F') echo "selected"; ?> >Fêmea</option>
+              </select>
             </div>
 
             <div class="form-group">

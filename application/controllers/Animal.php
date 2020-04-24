@@ -52,6 +52,10 @@
               $dados['registro'] = $this->animal_model->get($id);
           }
 
+
+          $this->load->model('raca_model');
+          $dados['listaRaca'] = $this->raca_model->get();
+
           //veririca se o form foi submetido e não houve erros de validação
           if($this->form_validation->run()===false){
 
