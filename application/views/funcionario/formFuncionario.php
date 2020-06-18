@@ -48,19 +48,19 @@
             </div>
 
             <div class="form-group">
-              <label for="idade">CPF</label>
+              <label for="cpf">CPF</label>
               <input class="form-control" id="cpf" type="number" name="cpf" value="<?= set_value('cpf', $registro['cpf']); ?>"
                  min="0" max="99999999999" placeholder="Informe o CPF">
             </div>
 
             <div class="form-group">
-              <label for="idade">RG</label>
+              <label for="rg">RG</label>
               <input class="form-control" id="rg" type="number" name="rg" value="<?= set_value('rg', $registro['rg']); ?>"
                  min="0" max="99999999999" placeholder="Informe o RG">
             </div>
 
             <div class="form-group">
-              <label for="idade">Telefone</label>
+              <label for="telefone">Telefone</label>
               <input class="form-control" id="telefone" type="number" name="telefone" value="<?= set_value('telefone', $registro['telefone']); ?>"
                  min="0" max="99999999999" placeholder="Informe a Telefone">
             </div>

@@ -1,5 +1,4 @@
 <?php
-  // class Pessoa extends CI_Controller{
   class Funcionario extends MY_Controller{
 
       public function __construct(){
@@ -12,7 +11,7 @@
       }
 
       public function index(){
-          $dados['titulo']= "Manutenção de Pessoa";
+          $dados['titulo']= "Manutenção de Funcionário";
           $dados['lista'] = $this->funcionario_model->get();
 
 

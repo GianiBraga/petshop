@@ -3,7 +3,7 @@
       private $tabelaNome;
       public function __construct(){
           $this->tabelaNome = 'funcionario';
-          // $this->load->database();
+          
       }
 
       public function get($id=null){
@@ -12,7 +12,7 @@
               return $query->result_array(); //todos os registros
           }
           $query = $this->db->get_where($this->tabelaNome, array('id'=>$id));
-          return $query->row_array(); //uma unica linha MATCH
+          return $query->row_array(); 
       }
 
       public function remover($id){

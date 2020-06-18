@@ -37,7 +37,7 @@
           $rule_nome = 'required' . (($id==null)? '|is_unique[pessoa.nome]' : '');
           // echo $rule_nome;
           $this->form_validation->set_rules('nome', 'Nome', $rule_nome);
-          $this->form_validation->set_rules('idade', 'Idade', 'required');
+          $this->form_validation->set_rules('dataNascimento', 'DataNascimento', 'required');
           $this->form_validation->set_rules('endereco', 'Endereco', 'required');
           $this->form_validation->set_rules('email', 'Email', 'required');
           $this->form_validation->set_rules('cpf', 'Cpf', 'required');

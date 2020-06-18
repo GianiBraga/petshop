@@ -12,7 +12,7 @@
               <thead>
                 <th>#</th>
                 <th>Nome</th>
-                <th>Idade</th>
+                <th>Data de Nascimento</th>
                 <th>Endereço</th>
                 <th>E-mail</th>
                 <th>CPF</th>
@@ -25,7 +25,7 @@
                   <tr>
                     <td><?= $item['id'];?></td>
                     <td><?= $item['nome'];?></td>
-                    <td><?= $item['idade'];?></td>
+                    <td><?= date('d/m/Y', strtotime($item['dataNascimento'])); ?></td>
                     <td><?= $item['endereco'];?></td>
                     <td><?= $item['email'];?></td>
                     <td><?= $item['cpf'];?></td>
