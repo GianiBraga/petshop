@@ -251,8 +251,7 @@ desired effect
             </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?= site_url('relatorio/formEmprestimoPeriodo'); ?>">Relatório Agendamento</a></li>
-          <li><a href="<?= site_url('relatoriopet/formPetRel'); ?>">Relatório Informação do Pet</a></li>
+          <li><a href="<?= site_url('relatorio/formAgendamentoPeriodo'); ?>">Relatório Agendamento</a></li>
         </ul>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Manutenções</span>

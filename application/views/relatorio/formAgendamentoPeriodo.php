@@ -11,7 +11,7 @@
                 </div>
           <?php } ?>
 
-          <?php echo form_open('relatorio/emprestimoPeriodo'); ?>
+          <?php echo form_open('relatorio/agendamentoPeriodo'); ?>
             <div class="form-group">
               <label for="dataentrada">Data Inicial</label>
               <input class="form-control" type="date" name="data_inicial" value="<?= date('Y-m-01'); ?>">
