@@ -24,7 +24,7 @@
                     <td><?= $item['tipoServico'];?></td>
                     <td><?= $item['descricao'];?></td>
                     <td><?= $item['duracao'];?></td>
-                    <td><?= $item['valor'];?></td>
+                    <td><?= "R$ ", $item['valor'];?></td>
                     <td>
                         <a class="btn btn-xs btn-info" href="<?= site_url('servico/cadastrar/'.$item['id']); ?>">
                             <i class="fa fa-fw fa-edit"></i>

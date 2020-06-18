@@ -35,7 +35,7 @@
 
             <div class="form-group">
               <label for="valor">Valor</label>
-              <input class="form-control" id="valor" type="number" name="valor" value="<?= set_value('valor', $registro['valor']); ?>"
+              <input class="form-control" id="valor" type="float" name="valor" value="<?= set_value('valor', $registro['valor']); ?>"
                  placeholder="Informe o Valor: ">
             </div>
 
