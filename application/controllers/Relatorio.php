@@ -16,9 +16,10 @@
       }
 
       public function emprestimoPeriodo() {
-          $ini   = $this->input->post('dataentrada');
+          $ini   = $this->input->post('data_inicial');
+          $fim   = $this->input->post('data_final');
           $dados['titulo'] = "Empréstimo por período";
-          $dados['data']   = $this->relatorio_model->getEmprestimoPeriodo($ini);
+          $dados['data']   = $this->relatorio_model->getEmprestimoPeriodo($ini, $fim);
           // echo '<pre>';
           // print_r($dados);
           // echo '</pre>';

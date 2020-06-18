@@ -13,8 +13,12 @@
 
           <?php echo form_open('relatorio/emprestimoPeriodo'); ?>
             <div class="form-group">
-              <label for="idagenda">Data Agendamento</label>
-              <input class="form-control" type="date" name="dataentrada" value="<?= date('Y-m-01'); ?>">
+              <label for="dataentrada">Data Inicial</label>
+              <input class="form-control" type="date" name="data_inicial" value="<?= date('Y-m-01'); ?>">
+            </div>
+            <div class="form-group">
+              <label for="dataentrada">Data Final</label>
+              <input class="form-control" type="date" name="data_final" value="<?= date('Y-m-d'); ?>">
             </div>
             <button class="btn btn-success" type="submit" formtarget="_blank">Enviar</button>
           </form>
