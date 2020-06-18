@@ -1,0 +1,30 @@
+<?php
+
+  class Relatorio extends MY_Controller{
+
+      public function __construct(){
+          parent::__construct();
+
+          $this->load->model('relatorio_model');
+      }
+
+      public function formEmprestimoPeriodo(){
+          $dados['titulo'] = "Relatório de Agendamentos";
+          $this->load->helper('form');
+          $this->load->library('form_validation'); 
+          $this->template->load('template', 'relatorio/formEmprestimoPeriodo', $dados);
+      }
+
+      public function emprestimoPeriodo() {
+          $ini   = $this->input->post('dataentrada');
+          $dados['titulo'] = "Empréstimo por período";
+          $dados['data']   = $this->relatorio_model->getEmprestimoPeriodo($ini);
+          // echo '<pre>';
+          // print_r($dados);
+          // echo '</pre>';
+          $this->load->library('MY_FPDF');
+          $this->load->view('relatorio/emprestimoPeriodoPDF', $dados);
+      }
+
+  }
+ ?>
