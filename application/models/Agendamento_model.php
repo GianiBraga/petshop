@@ -7,8 +7,8 @@
 
       public function get($id=null){
           if($id==null){
-            $this->db->select('a.id,a.dataentrada,a.horaentrada,a.descricao,a.idservico,a.idpessoa,s.descricao,s.tipoServico,
-           e.nome','p.nome',);
+            $this->db->select('a.id,a.dataentrada,a.horaentrada,a.idservico,a.idpessoa,a.idpet,s.descricao,s.tipoServico,s.valor,
+           e.nome as pessoa,r.nome as raca,r.nome');
             $this->db->from('agenda a');
             $this->db->join('servico s','s.id=a.idservico');
             $this->db->join('animal p','p.id=a.idpet');

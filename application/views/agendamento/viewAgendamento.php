@@ -12,9 +12,9 @@
               <thead>
                 <th class="col-md-1">#</th>
                 <th class="col-md-1">Data Entrada</th>
+                <th class="col-md-1">Horario Entrada</th>
                 <th class="col-md-1">Pet</th>
                 <th class="col-md-1">Tipo Serviço</th>
-                <th class="col-md-2">Descrição</th>
                 <th class="col-md-2">Pessoa Responsavel</th>
                 <th class="col-md-2">Valor</th>
               </thead>
@@ -22,11 +22,12 @@
                 <?php foreach($lista as $item):?>
                   <tr>
                     <td><?= $item['id'];?></td>
-                   
-                    <td><?= $item['nome'];?></td>
-                    <td><?= $item['descricao'];?></td>
-                    <td><?= $item['nome'];?></td>
-                    
+                    <td><?= date('d/m/Y', strtotime($item['dataentrada'])); ?></td>
+                    <td><?= date('H:i', strtotime($item['horaentrada'])); ?></td>
+                    <td><?= $item['raca'];?></td>
+                    <td><?= $item['tipoServico'];?></td>
+                    <td><?= $item['pessoa'];?></td>
+                    <td><?= "R$ ", $item['valor'];?></td>
 
                     <td class="text-left">
                         <a class="btn btn-sm btn-info" href="<?= site_url('agendamento/cadastrar/'.$item['id']); ?>">

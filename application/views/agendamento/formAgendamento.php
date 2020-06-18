@@ -53,13 +53,13 @@
             <div class="form-group">
                 <label for="dataentrada">Data Entrada</label>
                 <input id="dataentrada" class="form-control" type="date" name="dataentrada"
-                value="<?= set_value($registro!=null)? $registro['dataentrada'] : date('Y-m-d'); ?>"
+                value="<?= set_value($registro!=null) == $registro['dataentrada']; ?>"
                 placeholder="Informe a Data" required>
             </div>
 
             <div class="form-group">
-                <label for="dataentrada">Hora Entrada</label>
-                <input id="dataentrada" class="form-control" type="time" name="dataentrada"
+                <label for="horaentrada">Hora Entrada</label>
+                <input id="horaentrada" class="form-control" type="time" name="horaentrada"
                 value="<?= set_value($registro!=null) == $registro['horaentrada']; ?>"
                 placeholder="Informe a Data" required>
             </div>
