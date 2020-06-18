@@ -38,9 +38,7 @@
           // echo $rule_nome;
           $this->form_validation->set_rules('nome', 'Nome', $rule_nome);
           $this->form_validation->set_rules('sexo', 'Sexo', 'required');
-          $this->form_validation->set_rules('dataNascimento', 'DataNascimento', 'required');
-          $this->form_validation->set_rules('tamanho', 'Tamanho', 'required');
-          $this->form_validation->set_rules('peso', 'Peso', 'required');
+          $this->form_validation->set_rules('porte', 'Porte', 'required');
 
 
           //acao dinamica que sera enviada para a view
@@ -56,6 +54,7 @@
           $this->load->model('raca_model');
           $dados['listaRaca'] = $this->raca_model->get();
 
+          
           //veririca se o form foi submetido e não houve erros de validação
           if($this->form_validation->run()===false){
 
@@ -64,7 +63,7 @@
               if(!$this->animal_model->cadastrar($id)){
                   die("Erro ao tentar cadastrar os dados");
               }
-              redirect('animal/index'); //redireciona o fluxo da aplicação
+              redirect('animal'); //redireciona o fluxo da aplicação
           }
 
 

@@ -14,21 +14,17 @@
                 <th>Nome</th>
                 <th>Raça</th>
                 <th>Sexo</th>
-                <th>Idade</th>
-                <th>tamanho</th>
-                <th>peso</th>
+                <th>Porte</th>
                 <th class="col-md-1">Ações</th>
               </thead>
               <tbody>
                 <?php foreach($lista as $item):?>
                   <tr>
                     <td><?= $item['id'];?></td>
-                    <td><?= $item['animal'];?></td>
+                    <td><?= $item['nome'];?></td>
                     <td><?= $item['raca'];?></td>
-                    <td><?= $item['sexo'];?></td>
-                    <td><?= $item['dataNascimento'];?></td>
-                    <td><?= $item['tamanho'];?></td>
-                    <td><?= $item['peso'];?></td>
+                    <td><?php echo ($item['sexo']=='M')? 'Macho' : 'Femêa'; ?></td>
+                    <td><?php echo ($item['porte']=='M')? 'Médio' : 'Pequeno'; ?></td>
                     <td>
                         <a class="btn btn-xs btn-info" href="<?= site_url('animal/cadastrar/'.$item['id']); ?>">
                             <i class="fa fa-fw fa-edit"></i>

@@ -42,21 +42,12 @@
             </div>
 
             <div class="form-group">
-              <label for="dataNascimento">Data de Nascimento</label>
-              <input class="form-control" id="dataNascimento" type="date" name="dataNascimento" value="<?= set_value('dataNascimento', $registro['dataNascimento']); ?>"
-                 placeholder="Informe a data de nascimento: ">
-            </div>
-
-            <div class="form-group">
-              <label for="tamanho">Tamanho</label>
-              <input class="form-control" id="tamanho" type="tamanho" name="tamanho" value="<?= set_value('tamanho', $registro['tamanho']); ?>"
-                 min="0" max="4" placeholder="Informe o Tamanho: ">
-            </div>
-
-            <div class="form-group">
-              <label for="peso">Peso</label>
-              <input class="form-control" id="peso" type="text" name="peso" value="<?= set_value('peso', $registro['peso']); ?>"
-                 min="0" max="4" placeholder="Informe o Peso: ">
+              <label for="porte">Porte</label>
+              <select class="form-control" name="porte">
+                <option value="P" <?php if(isset($registro) && $registro['porte']=='P') echo "selected"; ?> >Pequeno</option>
+                <option value="M" <?php if(isset($registro) && $registro['porte']=='M') echo "selected"; ?> >Medio</option>
+                <option value="G" <?php if(isset($registro) && $registro['porte']=='G') echo "selected"; ?> >Grande</option>
+              </select>
             </div>
 
             <button class="btn btn-success" type="submit">Cadastrar</button>

@@ -8,7 +8,7 @@
 
       public function get($id=null){
           if($id==null){
-                $this->db->select('a.id,a.sexo,a.dataNascimento,a.tamanho, a.peso, a.nome as animal, r.nome as raca,r.descricao');
+                $this->db->select('a.id,a.sexo,a.porte, a.nome, r.nome as raca,r.descricao');
                 $this->db->from('animal a');
                 $this->db->join('raca r','r.id=a.idraca');
               $query = $this->db->get($this->tabelaNome);
@@ -25,9 +25,6 @@
 
       public function cadastrar($id=null){
           $registro = $this->input->post();
-          $idade = $this->get($id);
-
-          
           if($id==null){ //registro novo
               return $this->db->insert($this->tabelaNome, $registro);
           }
