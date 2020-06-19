@@ -49,6 +49,20 @@
           </div>
           </select>
 
+            
+          <div class="form-group">
+          <label for="idhorario ">Horario</label>
+          <select class="form-control" name="idhorario" required>
+          <option value="">Selecione o horario</option>
+          <?php foreach ($listaHorarios as $item): ?>
+          <option value="<?= $item['id']; ?>" <?php if(isset($registro) && $item['id']==$registro['idhorario']) echo "selected";?>>
+          <?= $item['horario']; ?>
+          </option>
+          <?php endforeach; ?>
+          </div>
+          </select>
+
+
 
             <div class="form-group">
                 <label for="dataentrada">Data Entrada</label>
@@ -57,12 +71,8 @@
                 placeholder="Informe a Data" required>
             </div>
 
-            <div class="form-group">
-                <label for="horaentrada">Hora Entrada</label>
-                <input id="horaentrada" class="form-control" type="time" name="horaentrada"
-                value="<?= set_value($registro!=null) == $registro['horaentrada']; ?>"
-                placeholder="Informe a Data" required>
-            </div>
+
+
 
             <button class="btn btn-success" type="submit">Enviar</button>
             <a href="<?= site_url('agendamento'); ?>" class="btn btn-info">Cancelar</a>

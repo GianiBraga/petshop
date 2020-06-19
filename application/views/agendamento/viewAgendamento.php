@@ -23,7 +23,7 @@
                   <tr>
                     <td><?= $item['id'];?></td>
                     <td><?= date('d/m/Y', strtotime($item['dataentrada'])); ?></td>
-                    <td><?= date('H:i', strtotime($item['horaentrada'])); ?></td>
+                    <td><?= date('H:i', strtotime($item['horario'])); ?></td>
                     <td><?= $item['raca'];?></td>
                     <td><?= $item['tipoServico'];?></td>
                     <td><?= $item['pessoa'];?></td>

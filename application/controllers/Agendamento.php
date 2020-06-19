@@ -37,7 +37,7 @@
           $this->form_validation->set_rules('tipoServico', 'Servico');
           $this->form_validation->set_rules('idpet', 'Pet', 'required');
           $this->form_validation->set_rules('dataentrada', 'Data', 'required');
-          $this->form_validation->set_rules('horaentrada', 'Time',);
+          $this->form_validation->set_rules('idhorario', 'Horario');
 
 
           $dados['acao'] = "agendamento/cadastrar/";
@@ -58,6 +58,9 @@
 
           $this->load->model('animal_model');
           $dados['listaPet'] = $this->animal_model->get();
+
+          $this->load->model('horario_model');
+          $dados['listaHorarios'] = $this->horario_model->get();
           if($this->form_validation->run()===false){
               $this->template->load('template', 'agendamento/formAgendamento', $dados);
 
