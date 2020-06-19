@@ -69,7 +69,7 @@
               if(!$this->usuario_model->cadastrar($id)){
                   die("Erro ao tentar cadastrar os dados");
               }
-              redirect('usuario/index'); //redireciona o fluxo da aplicação
+              redirect('usuario'); //redireciona o fluxo da aplicação
           }
 
 

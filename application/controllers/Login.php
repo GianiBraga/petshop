@@ -16,6 +16,7 @@
       public function validar(){
           $dados = $this->input->post();
           $dados['senha'] = md5($dados['senha']);
+          
 
           $this->db->select('id, email, permissao');
           $query = $this->db->get_where('usuario', $dados);
@@ -23,7 +24,7 @@
           if($query->num_rows()==1){
               $registro = $query->row_array();
               $this->session->set_userdata('logado', $registro);
-              redirect('pessoa');
+              redirect('agendamento');
           }else{
               $dados['msg'] = "Usuário ou senha Incorretos";
               $this->load->view("login", $dados);

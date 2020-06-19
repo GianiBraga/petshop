@@ -43,10 +43,13 @@
           $dados['acao'] = "agendamento/cadastrar/";
 
           $dados['registro'] = null;
+
           if($id!==null){
+              
               $dados['acao']    .= $id;
               $dados['registro'] = $this->agendamento_model->get($id);
-          }
+              
+            }
           $this->load->model('servico_model');
           $dados['listaTipoServico'] = $this->servico_model->get();
 
