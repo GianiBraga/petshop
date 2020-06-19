@@ -239,10 +239,15 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-            <li class="active">
+            <li class="">
               <a href="<?= site_url('agendamento'); ?>">
                 <i class="fa fa-link"></i> <span>Agendamento</span>
               </a>
+              <li class="">
+              <a href="<?= site_url('checklist'); ?>">
+                <i class="fa fa-link"></i> <span>Checklist</span>
+              </a>
+              
 
       <li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>Relatórios</span>
