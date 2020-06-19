@@ -34,9 +34,9 @@
           $dados['titulo'] = "Cadastro de Animal";
 
           //definição de regras para o formulário
-          $rule_nome = 'required' . (($id==null)? '|is_unique[animal.nome]' : '');
+          
           // echo $rule_nome;
-          $this->form_validation->set_rules('nome', 'Nome', $rule_nome);
+          $this->form_validation->set_rules('nome', 'Nome', 'required');
           $this->form_validation->set_rules('sexo', 'Sexo', 'required');
           $this->form_validation->set_rules('porte', 'Porte', 'required');
 

@@ -8,10 +8,10 @@
 
       public function get($id=null){
           if($id==null){
-                $this->db->select('a.id,a.sexo,a.porte, a.nome, r.nome as raca,r.descricao');
+                $this->db->select('a.id,a.sexo,a.porte, a.nome, r.nome as raca,');
                 $this->db->from('animal a');
                 $this->db->join('raca r','r.id=a.idraca');
-              $query = $this->db->get($this->tabelaNome);
+              $query = $this->db->get();
                return $query->result_array(); //todos os registros
           }
           $query = $this->db->get_where($this->tabelaNome, array('id'=>$id));
