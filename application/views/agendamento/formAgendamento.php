@@ -74,7 +74,7 @@
 
 
 
-            <button class="btn btn-success" type="submit">Enviar</button>
+            <button class="btn btn-success" type="submit">Cadastrar</button>
             <a href="<?= site_url('agendamento'); ?>" class="btn btn-info">Cancelar</a>
           </form>
         </div>
