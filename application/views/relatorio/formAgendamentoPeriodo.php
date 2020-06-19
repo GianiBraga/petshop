@@ -20,7 +20,7 @@
               <label for="dataentrada">Data Final</label>
               <input class="form-control" type="date" name="data_final" value="<?= date('Y-m-d'); ?>">
             </div>
-            <button class="btn btn-success" type="submit" formtarget="_blank">Enviar</button>
+            <button class="btn btn-success" type="submit" formtarget="_blank">Gerar</button>
           </form>
         </div>
     </div>
